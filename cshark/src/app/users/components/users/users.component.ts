@@ -1,4 +1,6 @@
+import { FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { user } from "app/users/models/user";
 
 
 @Component({
@@ -12,6 +14,7 @@ export class UsersComponent implements OnInit {
 
   ngOnInit() {
   }
- 
+  // user= new user();
+  name =  new FormControl();
 
 }
