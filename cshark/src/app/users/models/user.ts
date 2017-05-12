@@ -1,7 +1,7 @@
 export class user {        
         ID: number; 
         name: string;
-        string: string;
+        Mail: string;
         Apellido: string;
         RoleID?: number;
         UserName: string;

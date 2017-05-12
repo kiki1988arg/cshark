@@ -1,7 +1,7 @@
 <div class="container">
   <h2>User Detail</h2>
   <h3><i>Just a FormControl</i></h3>
-  <form [formGroup]="registrarseForm" (ngSubmit)="onSubmit()" >
+  <form [formGroup]="registrarseForm">
     <div class="form-group">
       <label class="center-block">Username:
         <input class="form-control" name="UserName"
@@ -28,7 +28,7 @@
       <strong>  <p>El mail tiene el formato incorrecto</p> </strong>
     </div>
      <div class="form-group">
-     <button [disabled]="!registrarseForm.valid" class="btn btn-success">Submit</button>
+     <button (click)="onSubmit()" type="button" [disabled]="!registrarseForm.valid" class="btn btn-success">Submit</button>
      </div>
 
   </form>
@@ -36,10 +36,24 @@
   <p>Form status: {{ registrarseForm.status | json }}</p>
   <p>Username status: {{ registrarseForm.controls.UserName.status | json }}</p>
 
-</div>
 
-<ul class="heroes">  
-  <li *ngFor="let user of users" >
-    <span class="badge">{{user.UserName}}</span> {{user.Mail}}
-  </li>
-</ul>
+
+<table class="table">
+    <thead>
+      <tr >
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let user of users" >
+      <tr >
+        <td>{{user.UserName}}</td>
+        <td> {{user.Mail}}</td>
+        <td> {{user.Password}}</td>
+      </tr>    
+     
+    </tbody>
+  </table>
+
+  </div>
