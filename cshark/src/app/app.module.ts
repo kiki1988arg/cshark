@@ -1,3 +1,4 @@
+import { ProductoComponent } from './producto/producto/producto.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -6,12 +7,13 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule }     from './app-routing.module';
-import { EagerComponent } from './eager/eager.component';
+import { EagerComponent } from './eager/eager.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     EagerComponent,
+    ProductoComponent
 
   ],
   imports: [

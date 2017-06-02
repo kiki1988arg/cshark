@@ -57,11 +57,11 @@ createForm() {
 }
 
 onSubmit(){
-  let usuarioCrear = new user();
-  usuarioCrear.UserName = this.registrarseForm.controls.UserName.value;
-  usuarioCrear.Password = this.registrarseForm.controls.Password.value;
-  usuarioCrear.Mail = this.registrarseForm.controls.Mail.value;
-  this.createUser(usuarioCrear);
+  // let usuarioCrear = new user();
+  // usuarioCrear.UserName = this.registrarseForm.controls.UserName.value;
+  // usuarioCrear.Password = this.registrarseForm.controls.Password.value;
+  // usuarioCrear.Mail = this.registrarseForm.controls.Mail.value;
+  this.createUser(this.registrarseForm.value);
 
 }
 
