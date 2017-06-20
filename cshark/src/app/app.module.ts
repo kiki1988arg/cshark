@@ -1,3 +1,4 @@
+import { ProductoDetalleComponent } from './producto/producto-detalle/producto-detalle.component';
 import { ProductoService } from './producto/services/producto.service';
 import { ProductoComponent } from './producto/producto/producto.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,7 +15,8 @@ import { EagerComponent } from './eager/eager.component'
   declarations: [
     AppComponent,
     EagerComponent,
-    ProductoComponent
+    ProductoComponent,
+    ProductoDetalleComponent
 
   ],
   imports: [
