@@ -1,3 +1,4 @@
+import { ProductoService } from './producto/services/producto.service';
 import { ProductoComponent } from './producto/producto/producto.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -23,7 +24,7 @@ import { EagerComponent } from './eager/eager.component'
     AppRoutingModule,
 
   ],
-  providers: [],
+  providers: [ProductoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

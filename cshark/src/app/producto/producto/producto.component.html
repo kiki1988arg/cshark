@@ -1,3 +1,30 @@
-<p>
-  producto works!
-</p>
+ 
+  <div class="container">
+  <h2>Ultimos 5 productos</h2>             
+  <table class="table">  
+     <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Lastname</th>
+        <th>Lastname</th>
+        <th>Lastname</th>
+      </tr>
+      </thead>
+    <tbody *ngFor="let product of Productos">
+    
+      <tr>
+        <td class="img-thumbnail"><img src="{{product.Foto}}" height="200px" width="200px" alt=""></td>
+        <td>{{product.Titulo}}</td>
+        <td>{{product.Titulo}}</td>
+        <td>{{product.DescripcionCorta}}</td>
+        <td>{{product.Precio}}</td>
+        <td>Ver más detalles</td>
+        
+        
+      </tr>  
+    </tbody>
+  </table>
+</div>
+
