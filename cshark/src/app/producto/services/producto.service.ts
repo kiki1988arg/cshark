@@ -29,4 +29,10 @@ export class ProductoService {
     console.error('An error occurred', error); // for demo purposes only
     return Promise.reject(error.message || error);
   }
+   getProduct(id: number): Observable<Producto> {
+        const url = `http://localhost:8090/api/producto/`+id;
+        return this.http.get(url)          
+            .map(this.extractData)
+            .catch(this.handleError);
+    }
 }

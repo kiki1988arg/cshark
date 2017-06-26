@@ -7,7 +7,7 @@ const routes: Routes = [
   {path: '', redirectTo: '/producto' ,pathMatch: 'full' },
   {path: 'producto', component: ProductoComponent },
   {path: 'users', loadChildren: './users/users.module#UsersModule' },
-  {path: 'producto/detail', component: ProductoDetalleComponent}
+  {path: 'producto/detail/:id', component: ProductoDetalleComponent}
   
 ];
 

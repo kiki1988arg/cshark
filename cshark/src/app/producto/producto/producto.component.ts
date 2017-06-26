@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { ProductoService } from './../services/producto.service';
 import { Producto } from './../models/producto';
 import { Component, OnInit } from '@angular/core';
@@ -13,7 +14,8 @@ export class ProductoComponent implements OnInit {
     errorMessage: any;
 
   constructor(
-     private ProductoService: ProductoService
+     private ProductoService: ProductoService,
+     private router: Router
   ) { }
 
   ngOnInit() {
@@ -26,6 +28,10 @@ export class ProductoComponent implements OnInit {
       .subscribe(
       data => this.Productos = data,
       error => this.errorMessage = <any>error);
+  }
+   gotoDetail(producto: Producto): void {
+    let link = ['producto/detail', producto.Id];
+    this.router.navigate(link);
   }
 
 }

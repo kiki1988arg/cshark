@@ -1,6 +1,69 @@
  
   <div class="container">
-  <h2>Ultimos 5 productos</h2>             
+ <div class="row">
+  <div class="col-md-2">
+<table class="table">  
+     <thead>
+      <tr>
+        <th class="text-primary">Genero</th>     
+      </tr>
+      </thead>
+      <tbody>   
+      <tr>
+        <td>Mujer</td>        
+      </tr>
+      <tr>
+        <td>Hombre</td>
+      </tr>
+      <tr>
+        <td>Niños</td>
+      </tr>           
+
+    </tbody>
+  </table>
+  <table class="table">  
+     <thead>
+      <tr>
+        <th class="text-primary">Marca</th>     
+      </tr>
+      </thead>
+      <tbody>   
+      <tr>
+        <td>Adidas</td>
+      </tr>
+      <tr>
+        <td>Nike</td>
+      </tr>
+      <tr>
+        <td>Puma</td>
+      </tr>
+      <tr>
+        <td>New Balance</td>
+      </tr>
+      <tr>
+        <td>Reebok</td>
+      </tr>      
+    </tbody>
+  </table>
+   <table class="table">  
+     <thead>
+      <tr>
+        <th class="text-primary">Estilos</th>     
+      </tr>
+      </thead>
+      <tbody>   
+      <tr>
+        <td>Urbanas</td>
+      </tr>
+      <tr>
+        <td>Deportivas</td>
+      </tr>
+      <tr>
+        <td>Skate</td>
+      </tr>
+    </tbody>
+  </table>  
+  </div></div>          
   <table class="table">  
      <thead>
       <tr>
@@ -19,8 +82,8 @@
         <td>{{product.Titulo}}</td>
         <td>{{product.Titulo}}</td>
         <td>{{product.DescripcionCorta}}</td>
-        <td>{{product.Precio}}</td>
-        <td>Ver más detalles</td>
+        <td>{{product.Precio}}</td>       
+        <td><a  (click)="gotoDetail(product)">Ver más detalles</a> </td>
         
         
       </tr>  
