@@ -35,4 +35,19 @@ export class ProductoService {
             .map(this.extractData)
             .catch(this.handleError);
     }
+    buscarProducto(term: string): Observable<Producto[]> {
+    if(term == "")
+    {
+       return this.getAllProducts();
+    }
+    else
+    {
+        return this.http
+               .get(`http://localhost:8090/api/producto/BuscarProducto?descripcionCorta=${term}`)
+               .map(this.extractData)
+               .catch(this.handleError);
+    }
+
+    
+    }
 }
